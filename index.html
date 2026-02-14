@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ALEX RIVERS | MECHANICAL ENGINEERING</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "matte-black": "#050505",
+                        "deep-charcoal": "#0d0d0d",
+                        "ui-grey": "#1a1a1a",
+                        "border-subtle": "#222222",
+                        "text-light": "#f0f0f0",
+                        "text-muted": "#666666",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "ultra-wide": "0.4em",
+                        "wide": "0.2em",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            html {
+                scroll-behavior: smooth;
+                scroll-snap-type: y mandatory;
+            }
+            body {
+                @apply bg-matte-black text-text-light font-sans;
+            }
+            section {
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+            }
+        }
+        .flat-border {
+            border: 1px solid #222222;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px #444444;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<nav class="fixed top-0 left-0 w-full z-50 px-12 py-10 flex justify-between items-center bg-transparent pointer-events-none">
+<div class="pointer-events-auto">
+<span class="text-sm font-semibold tracking-ultra-wide text-text-light uppercase">Rivers<span class="text-text-muted font-light">.System</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-12 pointer-events-auto">
+<a class="text-[10px] uppercase tracking-ultra-wide hover:text-white transition-colors" href="#hero">Start</a>
+<a class="text-[10px] uppercase tracking-ultra-wide hover:text-white transition-colors" href="#project1">Index</a>
+<a class="text-[10px] uppercase tracking-ultra-wide hover:text-white transition-colors" href="#skills">Stack</a>
+<a class="text-[10px] uppercase tracking-ultra-wide hover:text-white transition-colors" href="#contact">Contact</a>
+</div>
+<div class="pointer-events-auto">
+<button class="bg-text-light text-matte-black px-8 py-3 text-[10px] font-bold tracking-ultra-wide hover:bg-neutral-300 transition-all uppercase">
+            Dossier
+        </button>
+</div>
+</nav>
+<div class="fixed right-12 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col space-y-8">
+<a class="w-1 h-8 bg-white/10 hover:bg-white/40 transition-all" href="#hero"></a>
+<a class="w-1 h-8 bg-white/10 hover:bg-white/40 transition-all" href="#project1"></a>
+<a class="w-1 h-8 bg-white/10 hover:bg-white/40 transition-all" href="#project2"></a>
+<a class="w-1 h-8 bg-white/10 hover:bg-white/40 transition-all" href="#project3"></a>
+<a class="w-1 h-8 bg-white/10 hover:bg-white/40 transition-all" href="#skills"></a>
+</div>
+<section class="h-screen w-full relative flex items-center justify-center bg-matte-black" id="hero">
+<div class="container mx-auto px-6 relative z-10 text-center">
+<div class="mb-12 inline-block text-text-muted text-[10px] font-medium uppercase tracking-ultra-wide">
+            Precision Mechanical Systems / 2024
+        </div>
+<h1 class="text-6xl md:text-[7rem] font-bold mb-12 tracking-ultra-wide text-text-light uppercase leading-none">
+            Alex Rivers
+        </h1>
+<p class="text-xs text-text-muted max-w-xl mx-auto mb-16 leading-loose tracking-ultra-wide uppercase font-light">
+            Advancing systems through robotic kinematics and thermal optimization. Minimalist engineering for complex problems.
+        </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<a class="bg-deep-charcoal border border-border-subtle text-text-light px-12 py-5 text-[10px] tracking-ultra-wide uppercase hover:bg-ui-grey transition-all" href="#project1">
+                Explore Archives
+            </a>
+<a class="border border-border-subtle text-text-light px-12 py-5 text-[10px] tracking-ultra-wide uppercase hover:bg-deep-charcoal transition-all" href="#contact">
+                Office Contact
+            </a>
+</div>
+</div>
+</section>
+<section class="h-screen w-full flex items-center bg-matte-black" id="project1">
+<div class="grid grid-cols-1 md:grid-cols-2 h-full w-full border-t border-border-subtle">
+<div class="h-full relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 hover:opacity-60 transition-opacity duration-1000" data-alt="Technical CAD model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwL45C247dFE0lfFeqZW_SAAA1w_3pnyefPHDqV9ihUMyIRiQH5i0z6PiDB54LVYMMUEsxbUg7gI0LZ8CsOVPYPZIGTpfm1lendC0H92tMXQ1HKSmpCX4Omd_NWGUHSCU-oQdX9jz4pM0upIiCbf98j5o4qvbte5ynuczNCfrOjj_SxmqQ3z81uy12MsSUphud6p852w_MZYQ2F40HTJG7Qlzoxo3OvjV4kbIupp8cjSfjDR8kCssGlJ_PyKM0B81upo1rrfj9OLQ"/>
+</div>
+<div class="flex flex-col justify-center p-16 md:p-32 bg-matte-black border-l border-border-subtle">
+<span class="text-text-muted font-medium tracking-ultra-wide text-[10px] mb-8 uppercase">01 — Aerospace</span>
+<h2 class="text-3xl md:text-4xl font-semibold mb-10 uppercase tracking-wide leading-tight">Drone Chassis Architecture</h2>
+<p class="text-text-muted text-xs mb-14 leading-loose tracking-wide uppercase font-light max-w-md">
+                High-rigidity lightweight frame for industrial UAV operations. Engineered using carbon fiber composite optimization.
+            </p>
+<div class="grid grid-cols-2 gap-12 mb-14">
+<div>
+<h4 class="text-[9px] uppercase text-text-muted font-bold tracking-ultra-wide mb-4">Stack</h4>
+<p class="text-[10px] uppercase tracking-wide text-text-light">SolidWorks / Ansys</p>
+</div>
+<div>
+<h4 class="text-[9px] uppercase text-text-muted font-bold tracking-ultra-wide mb-4">Metric</h4>
+<p class="text-xl font-light tracking-wide">-15.4% Mass</p>
+</div>
+</div>
+<button class="self-start border border-border-subtle px-10 py-4 text-[10px] tracking-ultra-wide uppercase hover:bg-ui-grey transition-all">
+                Analysis Report
+            </button>
+</div>
+</div>
+</section>
+<section class="h-screen w-full flex items-center bg-matte-black" id="project2">
+<div class="grid grid-cols-1 md:grid-cols-2 h-full w-full border-t border-border-subtle">
+<div class="flex flex-col justify-center p-16 md:p-32 bg-matte-black order-2 md:order-1">
+<span class="text-text-muted font-medium tracking-ultra-wide text-[10px] mb-8 uppercase">02 — Automotive</span>
+<h2 class="text-3xl md:text-4xl font-semibold mb-10 uppercase tracking-wide leading-tight">Kinematic Suspension</h2>
+<p class="text-text-muted text-xs mb-14 leading-loose tracking-wide uppercase font-light max-w-md">
+                Double-wishbone assembly for Formula SAE racing. Optimization of dynamic camber curves.
+            </p>
+<div class="grid grid-cols-2 gap-12 mb-14">
+<div>
+<h4 class="text-[9px] uppercase text-text-muted font-bold tracking-ultra-wide mb-4">Computation</h4>
+<p class="text-[10px] uppercase tracking-wide text-text-light">MATLAB / Simulink</p>
+</div>
+<div>
+<h4 class="text-[9px] uppercase text-text-muted font-bold tracking-ultra-wide mb-4">Precision</h4>
+<p class="text-xl font-light tracking-wide">±0.05mm</p>
+</div>
+</div>
+<button class="self-start border border-border-subtle px-10 py-4 text-[10px] tracking-ultra-wide uppercase hover:bg-ui-grey transition-all">
+                Technical Study
+            </button>
+</div>
+<div class="h-full relative overflow-hidden border-l border-border-subtle order-1 md:order-2">
+<img class="absolute inset-0 w-full h-full object-cover grayscale opacity-30 hover:opacity-50 transition-opacity duration-1000" data-alt="Suspension design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbhCKUtgcmO8JKIiK4spMmfBLyOvYKrubOltAoRSpmduRw5CpLkB_QFEisJXToHQ93wdzBLUv0wOUtRSUUb0ZVmBD-6it9PIdAjU8nBj3JFitCZjeJJs4vPLVnGmaehP22ihlDe-XBaQoVK7nsu49sAw-KhGP1S-3bNsREvwi0X0iCTADA5NhxanfQ4Xwi32WltC9_Mr9hqaTSXPO45Az7rkoqIOys4LbZe0lbLb92JTz8zwyL2oUgMwRj8hB29J8jb9JE5QqxKzw"/>
+</div>
+</div>
+</section>
+<section class="h-screen w-full flex items-center bg-matte-black" id="project3">
+<div class="grid grid-cols-1 md:grid-cols-2 h-full w-full border-t border-border-subtle">
+<div class="h-full relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 hover:opacity-60 transition-opacity duration-1000" data-alt="Heat exchanger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz8CvQsu4ywayLcQjhbE2b29sNg5yo259T5IvrSMqD-VYNlT6_DC74rjE4uUUM3TN4P_HT_vPxmDLIF1U-xTCjEx7R4LEJltJZbVb1Gdabhe93cXtQy16i-HwbmhIYFWAQTeO4Z-hYeU51KJZo41MWr_Ym5Zz2WrkGSIXJNaKrBxB1BHCgxVNN9pzl1jktEchCwWKPGeQXGniSMA531QVIP8g0Sc__TzsYuYSxapgYHVPkVmj-oKM1s0o9LZLc_mlq1lUBc9kkBSA"/>
+</div>
+<div class="flex flex-col justify-center p-16 md:p-32 bg-matte-black border-l border-border-subtle">
+<span class="text-text-muted font-medium tracking-ultra-wide text-[10px] mb-8 uppercase">03 — Thermodynamics</span>
+<h2 class="text-3xl md:text-4xl font-semibold mb-10 uppercase tracking-wide leading-tight">Thermal Recovery</h2>
+<p class="text-text-muted text-xs mb-14 leading-loose tracking-wide uppercase font-light max-w-md">
+                High-efficiency counter-flow design for waste heat mitigation. CFD optimized flow patterns.
+            </p>
+<div class="grid grid-cols-2 gap-12 mb-14">
+<div>
+<h4 class="text-[9px] uppercase text-text-muted font-bold tracking-ultra-wide mb-4">Simulation</h4>
+<p class="text-[10px] uppercase tracking-wide text-text-light">Ansys Fluent</p>
+</div>
+<div>
+<h4 class="text-[9px] uppercase text-text-muted font-bold tracking-ultra-wide mb-4">Efficiency</h4>
+<p class="text-xl font-light tracking-wide">88% Thermal</p>
+</div>
+</div>
+<button class="self-start border border-border-subtle px-10 py-4 text-[10px] tracking-ultra-wide uppercase hover:bg-ui-grey transition-all">
+                Visual Analysis
+            </button>
+</div>
+</div>
+</section>
+<section class="h-screen w-full flex flex-col items-center justify-center bg-matte-black border-t border-border-subtle" id="skills">
+<div class="container mx-auto px-12">
+<div class="mb-24 text-center">
+<h2 class="text-4xl md:text-5xl font-bold mb-8 tracking-ultra-wide uppercase">Technical Stack</h2>
+<p class="text-text-muted text-[10px] tracking-ultra-wide uppercase">Core competencies across design, simulation, and hardware implementation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border-subtle">
+<div class="p-16 border-r border-border-subtle hover:bg-deep-charcoal transition-all">
+<h3 class="text-xs font-bold mb-10 uppercase tracking-ultra-wide text-text-light">Design Architecture</h3>
+<ul class="space-y-6 text-text-muted text-[10px] tracking-ultra-wide uppercase font-light">
+<li>SolidWorks (CSWA)</li>
+<li>Autodesk Fusion 360</li>
+<li>Generative Design</li>
+<li>GD&amp;T Standards</li>
+</ul>
+</div>
+<div class="p-16 border-r border-border-subtle hover:bg-deep-charcoal transition-all">
+<h3 class="text-xs font-bold mb-10 uppercase tracking-ultra-wide text-text-light">Simulation</h3>
+<ul class="space-y-6 text-text-muted text-[10px] tracking-ultra-wide uppercase font-light">
+<li>Ansys (FEA &amp; CFD)</li>
+<li>MATLAB / Simulink</li>
+<li>Thermal Modeling</li>
+<li>Dynamic Simulation</li>
+</ul>
+</div>
+<div class="p-16 hover:bg-deep-charcoal transition-all">
+<h3 class="text-xs font-bold mb-10 uppercase tracking-ultra-wide text-text-light">Fabrication</h3>
+<ul class="space-y-6 text-text-muted text-[10px] tracking-ultra-wide uppercase font-light">
+<li>CNC Machining</li>
+<li>Additive Manufacturing</li>
+<li>Precision Metrology</li>
+<li>Prototyping Systems</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="h-screen w-full flex items-center bg-matte-black border-t border-border-subtle relative overflow-hidden" id="contact">
+<div class="container mx-auto px-12 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div>
+<h2 class="text-5xl md:text-7xl font-bold mb-12 leading-none uppercase tracking-ultra-wide">
+                    Ready for<br/>
+<span class="text-outline">Integration</span>
+</h2>
+<p class="text-text-muted text-xs mb-16 max-w-sm font-light leading-loose uppercase tracking-wide">
+                    Available for R&amp;D collaborations in aerospace or robotics.
+                </p>
+<div class="space-y-12">
+<a class="block text-sm font-light hover:text-white transition-colors tracking-ultra-wide uppercase" href="mailto:alex.rivers@university.edu">
+                        alex.rivers@university.edu
+                    </a>
+<div class="flex items-center gap-4">
+<a class="w-12 h-12 border border-border-subtle flex items-center justify-center hover:bg-text-light hover:text-matte-black transition-all" href="#">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</a>
+<a class="w-12 h-12 border border-border-subtle flex items-center justify-center hover:bg-text-light hover:text-matte-black transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-matte-black p-0">
+<form class="space-y-10" onsubmit="return false">
+<div class="space-y-4">
+<label class="text-[9px] font-bold uppercase text-text-muted tracking-ultra-wide">Full Identification</label>
+<input class="w-full bg-deep-charcoal border-none px-6 py-5 focus:ring-1 focus:ring-border-subtle outline-none text-text-light text-[10px] uppercase tracking-wide" placeholder="Identity..." type="text"/>
+</div>
+<div class="space-y-4">
+<label class="text-[9px] font-bold uppercase text-text-muted tracking-ultra-wide">Contact Vector</label>
+<input class="w-full bg-deep-charcoal border-none px-6 py-5 focus:ring-1 focus:ring-border-subtle outline-none text-text-light text-[10px] uppercase tracking-wide" placeholder="Email Address..." type="email"/>
+</div>
+<div class="space-y-4">
+<label class="text-[9px] font-bold uppercase text-text-muted tracking-ultra-wide">Transmission</label>
+<textarea class="w-full bg-deep-charcoal border-none px-6 py-5 focus:ring-1 focus:ring-border-subtle outline-none text-text-light text-[10px] uppercase tracking-wide resize-none" placeholder="Details..." rows="4"></textarea>
+</div>
+<button class="w-full bg-text-light text-matte-black font-bold py-6 hover:bg-neutral-300 transition-all text-[10px] tracking-ultra-wide uppercase">
+                        Initialize Contact
+                    </button>
+</form>
+</div>
+</div>
+<footer class="absolute bottom-12 left-0 right-0 flex flex-col md:flex-row justify-between items-center text-text-muted text-[9px] tracking-ultra-wide uppercase opacity-50">
+<p>ALEX RIVERS © 2024 — ARCHIVE</p>
+<div class="flex gap-12 mt-6 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Protocols</a>
+<a class="hover:text-white transition-colors" href="#">Vault</a>
+</div>
+</footer>
+</div>
+</section>
+
+</body></html>
