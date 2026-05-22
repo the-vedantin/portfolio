@@ -68,6 +68,10 @@ window.portfolioContent = {
             src: "embeds/suspension_3d.html",
             large: true
           },
+          stats: [
+            { value: "18/25", label: "design score" },
+            { value: "solo", label: "presentation" }
+          ],
           body: ["Suspension kinematics and vehicle dynamics work I did for the UH FSAE car: the interactive model here is the suspension geometry itself, showing the wishbones, steering, pushrod/rocker geometry, uprights, wheels, CG, roll axis, and pitch axis. The binder covers the motion ratio targets, toe and camber behavior, roll-center migration, tire/load-transfer assumptions, and design load cases for the 2026 car."],
           links: [{ label: "2025-2026 VD Binder", href: "https://drive.google.com/file/d/1Lf5DLrOVL8FCHjbPtm_apU45Xse8KaiJ/view?usp=sharing" }]
         },
@@ -117,8 +121,12 @@ window.portfolioContent = {
         {
           kicker: "Onshape workflow",
           title: "Fast Top-Down Robot CAD",
-          image: "assets/site-images/robotics/01-f53a74a787.jpg",
-          body: ["I have logged over 1000 hours in Onshape learning parametric modeling and top-down design. Modeling full robots with complex assemblies like continuous elevators, coaxial gearboxes, and swerve modules allowed me to develop a remarkably fast CAD workflow and design a robust robot for the 2025 FRC season in only 3 days. The robot saw no mechanical failures at in-season competitions."],
+          embed: {
+            title: "FRC robot CAD visualizer",
+            src: "embeds/robot_3d.html",
+            large: true
+          },
+          body: ["I have logged over 1000 hours in Onshape learning parametric modeling and top-down design. Modeling full robots with complex assemblies like continuous elevators, coaxial gearboxes, and swerve modules allowed me to develop a remarkably fast CAD workflow and design a robust robot for the 2025 FRC season in only 3 days. The interactive model here lets you orbit the robot CAD directly. The robot saw no mechanical failures at in-season competitions."],
           links: [
             { label: "CADathon Submission", href: "https://drive.google.com/file/d/1KwpW53MEeKyYi1NS2xE7FN4x0r2EiYLd/view" },
             { label: "Design Standards (Obsolete)", href: "https://docs.google.com/document/d/1FxQ36kwEG97egxujqLab-jtVC45wR5FM9ErZcslNIxs/edit?tab=t.0" }

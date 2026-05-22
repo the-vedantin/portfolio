@@ -62,6 +62,7 @@
             <div class="project-copy">
               ${project.kicker ? `<p class="eyebrow">${project.kicker}</p>` : ""}
               <h2>${project.title}</h2>
+              ${project.stats ? `<div class="stats">${project.stats.map((stat) => `<div><strong>${stat.value}</strong><span>${stat.label}</span></div>`).join("")}</div>` : ""}
               ${(project.body || []).map((paragraph) => `<p>${paragraph}</p>`).join("")}
               ${renderLinks(project.links)}
             </div>
