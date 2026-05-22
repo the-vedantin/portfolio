@@ -112,6 +112,15 @@ main {
   max-width: 880px;
 }
 
+.hero.hero-text-only {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 42vh;
+}
+
+.hero.hero-text-only .hero-copy {
+  max-width: 960px;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent-2);

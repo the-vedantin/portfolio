@@ -119,9 +119,21 @@
       "contentType": "image/jpeg"
     },
     {
-      "source": "https://lh3.googleusercontent.com/sitesv/AA5AbUASwhHC_1n3FBq3qYMgt2iF7bXligt3euX_ypR4xi2RyiSmA7z0WmzDUufHlQMURjjzrpHJw-mXtNwMGQuODZCVLKCNqWwQlbp1ueKWDkPkKdhsMFQSARFZFTbqjhFYmeFruRAsBz0Bm7snmEcm6sZdQzpOjUXfro6hRlzhrDkFa5AlaYDauYBTDQc=w1600",
-      "local": "assets/site-images/robotics/04-bb00e25df9.jpg",
-      "bytes": 157915,
+      "source": "DSC_1094.JPG",
+      "local": "assets/site-images/robotics/05-depthcharge-bumper-closeup.jpg",
+      "bytes": 11697670,
+      "contentType": "image/jpeg"
+    },
+    {
+      "source": "P1230390.JPG",
+      "local": "assets/site-images/robotics/06-orange-dynamite-roller.jpg",
+      "bytes": 7572992,
+      "contentType": "image/jpeg"
+    },
+    {
+      "source": "PXL_20240302_040158252.PORTRAIT.jpg",
+      "local": "assets/site-images/robotics/07-orange-dynamite-lit.jpg",
+      "bytes": 587077,
       "contentType": "image/jpeg"
     }
   ],

@@ -105,8 +105,8 @@ window.portfolioContent = {
     robotics: {
       eyebrow: "FRC and robot design",
       title: "Robotics",
-      lead: "FRC robot design, fabrication leadership, Onshape workflows, CNC manufacturing, and a 4-DOF senior project robot.",
-      heroImage: "assets/site-images/robotics/02-2248e6c70f.jpg",
+      lead: "",
+      heroImage: "",
       links: [],
       projects: [
         {
@@ -219,7 +219,7 @@ Object.assign(window.portfolioContent.pages.fsae, {
   backgroundImage: "assets/site-images/fsae/05-0f57ebed1f.jpg"
 });
 Object.assign(window.portfolioContent.pages.robotics, {
-  backgroundImage: "assets/site-images/robotics/02-2248e6c70f.jpg"
+  backgroundImage: "assets/site-images/robotics/05-depthcharge-bumper-closeup.jpg"
 });
 Object.assign(window.portfolioContent.pages["cad-gallery"], {
   backgroundImage: renderByName("vasuki")
@@ -237,9 +237,9 @@ const projectBackgrounds = {
     "assets/site-images/fsae/05-0f57ebed1f.jpg"
   ],
   robotics: [
-    "assets/site-images/robotics/01-f53a74a787.jpg",
-    "assets/site-images/robotics/02-2248e6c70f.jpg",
-    "assets/site-images/robotics/03-b5f2cc4511.jpg"
+    "assets/site-images/robotics/05-depthcharge-bumper-closeup.jpg",
+    "assets/site-images/robotics/06-orange-dynamite-roller.jpg",
+    "assets/site-images/robotics/07-orange-dynamite-lit.jpg"
   ]
 };
 

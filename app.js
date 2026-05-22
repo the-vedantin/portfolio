@@ -78,7 +78,7 @@
 
   function renderHero(page) {
     return `
-      <section class="hero page-band reveal" style="${page.backgroundImage ? `--bg-image: url('${page.backgroundImage}')` : ""}">
+      <section class="hero page-band reveal ${page.heroImage ? "" : "hero-text-only"}" style="${page.backgroundImage ? `--bg-image: url('${page.backgroundImage}')` : ""}">
         <div class="hero-copy">
           ${page.eyebrow ? `<p class="eyebrow">${page.eyebrow}</p>` : ""}
           <h1>${page.title}</h1>

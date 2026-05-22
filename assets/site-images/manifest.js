@@ -23,7 +23,9 @@ window.portfolioImages = {
     "assets/site-images/robotics/01-f53a74a787.jpg",
     "assets/site-images/robotics/02-2248e6c70f.jpg",
     "assets/site-images/robotics/03-b5f2cc4511.jpg",
-    "assets/site-images/robotics/04-bb00e25df9.jpg"
+    "assets/site-images/robotics/05-depthcharge-bumper-closeup.jpg",
+    "assets/site-images/robotics/06-orange-dynamite-roller.jpg",
+    "assets/site-images/robotics/07-orange-dynamite-lit.jpg"
   ],
   "cad-gallery": [
     "assets/site-images/cad-gallery/01-a7df4e5225.jpg",
