@@ -18,10 +18,7 @@ window.portfolioContent = {
             src: "embeds/suspension_3d.html"
           },
           body: ["As part of UH's Formula SAE team, I've contributed to the development of the suspension system. My involvement spans designing the kinematic model, component design and FEA validation, and CNC machining, giving me ownership of one of the most critical systems on the racecar as a first-year student. Separately, I modeled a full FSAE car from scratch in two weeks to develop my top-down parametric CAD approach."],
-          links: [
-            { label: "Open FSAE", href: "/fsae/" },
-            { label: "2025-2026 VD Binder", href: "https://drive.google.com/file/d/1Lf5DLrOVL8FCHjbPtm_apU45Xse8KaiJ/view?usp=sharing" }
-          ]
+          links: [{ label: "Open FSAE", href: "/fsae/" }]
         },
         {
           kicker: "Robotics",
@@ -219,7 +216,7 @@ const renderByName = (name) => {
 };
 
 Object.assign(window.portfolioContent.pages.home, {
-  backgroundImage: "assets/about/aayu-about.jpg"
+  backgroundImage: "assets/about/aayu-about-tint.jpg"
 });
 Object.assign(window.portfolioContent.pages.fsae, {
   backgroundImage: "assets/site-images/fsae/05-0f57ebed1f.jpg"
