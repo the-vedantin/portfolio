@@ -66,7 +66,7 @@
 
 <div id="info-panel">
   <h2 id="panel-title">Double-Wishbone Layout</h2>
-  <p id="panel-body">Hover any component in the 3D view, or pick from the list. Drag to orbit, scroll to zoom.</p>
+  <p id="panel-body">Hover any component in the 3D view, or pick from the list. Drag to orbit; right-drag to pan.</p>
   <div id="panel-extras"></div>
 </div>
 
@@ -81,7 +81,7 @@
   <button class="part-btn" data-group="pitch-axis">Pitch Axis</button>
 </div>
 
-<div id="legend"><strong>Controls:</strong> Drag orbit · Right-drag pan · Zoom disabled</div>
+<div id="legend"><strong>Controls:</strong> Drag orbit / Right-drag pan</div>
 
 <script type="importmap">
 { "imports": {
@@ -638,7 +638,7 @@ function setGroup(g) {
   const panel = document.getElementById('info-panel');
   if (!info) {
     document.getElementById('panel-title').textContent = 'Double-Wishbone Layout';
-    document.getElementById('panel-body').textContent = 'Hover any component in the 3D view, or pick from the list. Drag to orbit, scroll to zoom.';
+    document.getElementById('panel-body').textContent = 'Hover any component in the 3D view, or pick from the list. Drag to orbit; right-drag to pan.';
     document.getElementById('panel-extras').innerHTML = '';
     panel.classList.remove('active');
   } else {

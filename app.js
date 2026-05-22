@@ -26,7 +26,7 @@
 
   function embedFrame(embed) {
     if (!embed || !embed.src) return "";
-    return `<iframe class="${embed.large ? "embed-large" : ""}" src="${embed.src}" title="${embed.title || "Interactive embed"}" allowfullscreen loading="lazy"></iframe>`;
+    return `<iframe class="${embed.large ? "embed-large" : ""}" src="${embed.src}" title="${embed.title || "Interactive embed"}" allowfullscreen></iframe>`;
   }
 
   function renderLinks(links) {
