@@ -107,10 +107,7 @@ window.portfolioContent = {
       title: "Robotics",
       lead: "FRC robot design, fabrication leadership, Onshape workflows, CNC manufacturing, and a 4-DOF senior project robot.",
       heroImage: "assets/site-images/robotics/02-2248e6c70f.jpg",
-      links: [
-        { label: "CADathon Submission", href: "https://drive.google.com/file/d/1KwpW53MEeKyYi1NS2xE7FN4x0r2EiYLd/view" },
-        { label: "DepthCharge Video", href: "https://www.youtube.com/watch?v=QUDzrMtQH3E" }
-      ],
+      links: [],
       projects: [
         {
           kicker: "Onshape workflow",
