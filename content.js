@@ -48,8 +48,9 @@ window.portfolioContent = {
     fsae: {
       eyebrow: "Formula SAE",
       title: "FSAE Suspension, Simulation, and Vehicle CAD",
+      hideHero: true,
       lead: "FSAE work spanning suspension kinematics for the UH car, vehicle dynamics, FEA validation, CNC manufacturing, uprights, Vahan as a separate simulator project, and a full summer CAD project.",
-      heroImage: "assets/site-images/fsae/05-0f57ebed1f.jpg",
+      heroImage: "",
       links: [
         { label: "2025-2026 VD Binder", href: "https://drive.google.com/file/d/1Lf5DLrOVL8FCHjbPtm_apU45Xse8KaiJ/view?usp=sharing" }
       ],
@@ -105,6 +106,7 @@ window.portfolioContent = {
     robotics: {
       eyebrow: "FRC and robot design",
       title: "Robotics",
+      hideHero: true,
       lead: "",
       heroImage: "",
       links: [],
@@ -187,7 +189,7 @@ window.portfolioContent = {
       eyebrow: "Machining, fabrication, repair",
       title: "Build Gallery",
       lead: "A migrated gallery of fabrication, machining, robot build, repair, and prototyping work.",
-      heroImage: "assets/site-images/build-gallery/03-0eec47128d.jpg",
+      heroImage: "",
       galleryTitle: "Builds",
       gallery: [
         { title: "Spacers", body: "Turned spacers and small hardware on the lathe.", image: "https://lh3.googleusercontent.com/sitesv/AA5AbUDHibECe0geXDAnQXtmwJVsnwf5Lzu_FQEu6zEJVeIkQ-145AOl9BsPdmhfPIw-0RPcAJEn62eMRR38tvhy6_VyMjj7XJUOoCGVdqNqlh_zKRfZuKyo-XaG2-FmX3qqASX36tAyCbnqu3LOSMoJczYv1tbSaFhAsPPZKQdo_yz5FnY3LF1mU3t63PeauOpcqWvk2IW884Juf2GFmRw1Ehafty3mGZdBWczpDpM=w1280" },
@@ -216,13 +218,13 @@ Object.assign(window.portfolioContent.pages.home, {
   backgroundImage: "assets/about/aayu-about-tint.jpg"
 });
 Object.assign(window.portfolioContent.pages.fsae, {
-  backgroundImage: "assets/site-images/fsae/05-0f57ebed1f.jpg"
+  backgroundImage: ""
 });
 Object.assign(window.portfolioContent.pages.robotics, {
-  backgroundImage: "assets/site-images/robotics/05-depthcharge-bumper-closeup.jpg"
+  backgroundImage: ""
 });
 Object.assign(window.portfolioContent.pages["cad-gallery"], {
-  backgroundImage: renderByName("vasuki")
+  backgroundImage: renderByName("jazz")
 });
 Object.assign(window.portfolioContent.pages["build-gallery"], {
   backgroundImage: renderByName("toast")
@@ -230,14 +232,14 @@ Object.assign(window.portfolioContent.pages["build-gallery"], {
 
 const projectBackgrounds = {
   fsae: [
+    "assets/renders/21-revision-zero-2025-jul-12-06-20-47am-000-customizedview3908991307-jpg.jpg",
     "assets/site-images/fsae/02-0dd95b9624.png",
-    "assets/site-images/fsae/01-bd9868cea7.png",
-    "assets/site-images/fsae/03-8992cf0b76.jpg",
-    "assets/site-images/fsae/04-e0754e59b9.jpg",
-    "assets/site-images/fsae/05-0f57ebed1f.jpg"
+    "assets/renders/22-revision-zero-2025-jul-12-06-34-20am-000-customizedview12647960830-jpg.jpg",
+    "assets/renders/23-revision-zero-2025-jul-12-06-37-45am-000-customizedview4558678813-jpg.jpg",
+    "assets/renders/24-revision-zero-2025-jul-12-06-39-40am-000-customizedview8583869675-jpg.jpg"
   ],
   robotics: [
-    "assets/site-images/robotics/05-depthcharge-bumper-closeup.jpg",
+    "assets/renders/02-0-robot-1-horus-2024-aug-08-10-46-18pm-000-customizedview5174201726-jpg.jpg",
     "assets/site-images/robotics/06-orange-dynamite-roller.jpg",
     "assets/site-images/robotics/07-orange-dynamite-lit.jpg"
   ]
@@ -249,9 +251,31 @@ for (const [pageId, backgrounds] of Object.entries(projectBackgrounds)) {
   });
 }
 
+const localImagePattern = /^assets\/.*\.(?:jpg|jpeg|png|webp)$/i;
+const collectUsedImages = () => {
+  const used = new Set();
+  const visit = (value) => {
+    if (!value) return;
+    if (typeof value === "string") {
+      if (localImagePattern.test(value)) used.add(value);
+      return;
+    }
+    if (Array.isArray(value)) {
+      value.forEach(visit);
+      return;
+    }
+    if (typeof value === "object") {
+      Object.values(value).forEach(visit);
+    }
+  };
+  visit(window.portfolioContent.pages);
+  return used;
+};
+
 if (renderLibrary.length) {
   const cadPage = window.portfolioContent.pages["cad-gallery"];
-  cadPage.gallery = (window.portfolioRenders || []).map((item) => ({
+  const usedImages = collectUsedImages();
+  cadPage.gallery = (window.portfolioRenders || []).filter((item) => !usedImages.has(item.local)).map((item) => ({
     image: item.local
   }));
 }

@@ -224,7 +224,7 @@
       link.classList.toggle("is-active", linkRoute === route);
     });
     app.innerHTML = [
-      renderHero(page),
+      page.hideHero ? "" : renderHero(page),
       renderHighlights(page.highlights),
       renderVisualizers(page.visualizers),
       renderEmbeds(page.featuredEmbeds, page.featuredEmbedsTitle),
