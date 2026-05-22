@@ -6,38 +6,35 @@ window.portfolioContent = {
         "Hi! I'm Aayu. I'm a Mechanical Engineering student studying at the University of Houston (Class of 2029).",
         "I’m driven by competitive engineering and pursue my projects with a lot of ambition to deliver designs that make the most out of the constraints I’m working with. I emphasize efficient workflows that use parametric models to cut out repetitive work and create faster design cycles."
       ],
-      heroImage: "assets/site-images/home/01-86dccc7f67.jpg",
+      heroImage: "assets/about/aayu-about.jpg",
       links: [],
       highlights: [],
-      featuredEmbedsTitle: "2025-2026 Vehicle Dynamics and Suspension",
-      featuredEmbeds: [
+      visualizers: [
         {
+          kicker: "FSAE",
           title: "2026 FSAE suspension visualizer",
-          src: "embeds/suspension_3d.html",
-          caption: "Interactive model of the suspension kinematics I designed for the UH FSAE car.",
-          large: true,
+          embed: {
+            title: "2026 FSAE suspension visualizer",
+            src: "embeds/suspension_3d.html"
+          },
+          body: ["As part of UH's Formula SAE team, I've contributed to the development of the suspension system. My involvement spans designing the kinematic model, component design and FEA validation, and CNC machining, giving me ownership of one of the most critical systems on the racecar as a first-year student. Separately, I modeled a full FSAE car from scratch in two weeks to develop my top-down parametric CAD approach."],
           links: [
             { label: "Open FSAE", href: "/fsae/" },
             { label: "2025-2026 VD Binder", href: "https://drive.google.com/file/d/1Lf5DLrOVL8FCHjbPtm_apU45Xse8KaiJ/view?usp=sharing" }
           ]
-        }
-      ],
-      projects: [
-        {
-          title: "FSAE",
-          image: "assets/site-images/home/03-837b728ae3.jpg",
-          backgroundImage: "assets/site-images/home/08-391e6bcce9.jpg",
-          body: ["As part of UH's Formula SAE team, I've contributed to the development of the suspension system. My involvement spans designing the kinematic model, component design and FEA validation, and CNC machining, giving me ownership of one of the most critical systems on the racecar as a first-year student. Separately, I modeled a full FSAE car from scratch in two weeks to develop my top-down parametric CAD approach."],
-          links: [{ label: "FSAE", href: "/fsae/" }]
         },
         {
-          title: "Robotics",
-          image: "assets/site-images/home/04-0fea43885a.jpg",
-          backgroundImage: "assets/site-images/home/09-2170987904.jpg",
+          kicker: "Robotics",
+          title: "DepthCharge 2025 competition robot",
+          embed: {
+            title: "DepthCharge 2025 competition robot CAD visualizer",
+            src: "embeds/robot_3d.html?v=robot-web-basic-2"
+          },
           body: ["I spent three years with FRC team 2583, growing from makerspace committee lead to Robot Director. Improving my skills as an engineer and a leader, managing budget and build timelines, coordinating sub teams to deliver competitive machines that win awards."],
-          links: [{ label: "Robotics", href: "/robotics/" }]
+          links: [{ label: "Open Robotics", href: "/robotics/" }]
         }
       ],
+      projects: [],
       galleryLinks: [
         {
           title: "Look at my build gallery here",
@@ -66,7 +63,8 @@ window.portfolioContent = {
           embed: {
             title: "2026 FSAE suspension visualizer",
             src: "embeds/suspension_3d.html",
-            large: true
+            large: true,
+            fullWidth: true
           },
           stats: [
             { value: "18/25", label: "design score" }
@@ -123,7 +121,8 @@ window.portfolioContent = {
           embed: {
             title: "DepthCharge 2025 competition robot CAD visualizer",
             src: "embeds/robot_3d.html?v=robot-web-basic-2",
-            large: true
+            large: true,
+            fullWidth: true
           },
           body: ["I have logged over 1000 hours in Onshape learning parametric modeling and top-down design. Modeling full robots with complex assemblies like continuous elevators, coaxial gearboxes, and swerve modules allowed me to develop a remarkably fast CAD workflow and design DepthCharge, the 2025 competition robot, in only 3 days. The interactive model here lets you orbit the DepthCharge CAD directly. The robot saw no mechanical failures at in-season competitions."],
           links: [
@@ -284,5 +283,8 @@ window.portfolioContent.pages["build-gallery"].gallery = [
   { title: "Spin Tops", body: "Turned on the lathe out of aluminum and steel.", image: "assets/site-images/build-gallery/18-06b53d97fa.png" },
   { title: "Parts Cart", body: "Refurbished the top of the parts cart. Cut, sanded, and oiled the new top.", image: "assets/site-images/build-gallery/19-f4547b58c8.png" },
   { title: "Bambu P1S", body: "Maintained and repaired a Bambu P1S for FRC. Bought and replaced the extruder, fans, and nozzles.", image: "assets/site-images/build-gallery/20-b08688dc27.png" },
-  { title: "Toast", body: "2024 season robot that I designed. I helped cut the plates on the CNC and turned shafts on the lathe.", image: "assets/site-images/build-gallery/21-cfb99714c7.png" }
+  { title: "Toast", body: "2024 season robot that I designed. I helped cut the plates on the CNC and turned shafts on the lathe.", image: "assets/site-images/build-gallery/21-cfb99714c7.png" },
+  { title: "FSAE Rear Shocks", body: "Rear shock and bellcrank assembly on the UH FSAE car.", image: "assets/site-images/build-gallery/23-fsae-rear-shocks-track.jpg" },
+  { title: "FSAE Bellcrank Install", body: "Installed rear bellcrank, pushrod, and suspension links on the chassis.", image: "assets/site-images/build-gallery/24-fsae-bellcrank-install.jpg" },
+  { title: "FSAE Rear Linkage", body: "Rear suspension links and wheel-end hardware installed on the chassis.", image: "assets/site-images/build-gallery/25-fsae-rear-linkage.jpg" }
 ];

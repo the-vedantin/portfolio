@@ -60,7 +60,12 @@
 
   function embedFrame(embed) {
     if (!embed || !embed.src) return "";
-    return `<iframe class="${embed.large ? "embed-large" : ""}" src="${embed.src}" title="${embed.title || "Interactive embed"}" allowfullscreen></iframe>`;
+    const classes = [
+      embed.large ? "embed-large" : "",
+      embed.home ? "embed-home" : "",
+      embed.fullWidth ? "embed-full-width" : ""
+    ].filter(Boolean).join(" ");
+    return `<iframe class="${classes}" src="${embed.src}" title="${embed.title || "Interactive embed"}" allowfullscreen></iframe>`;
   }
 
   function renderLinks(links) {
@@ -91,7 +96,7 @@
     return `
       <section class="section stack wide-section">
         ${projects.map((project) => `
-          <article class="project reveal" style="${project.backgroundImage ? `--bg-image: url('${project.backgroundImage}')` : ""}">
+          <article class="project ${project.embed?.fullWidth ? "project-full-embed" : ""} reveal" style="${project.backgroundImage ? `--bg-image: url('${project.backgroundImage}')` : ""}">
             ${project.embed ? embedFrame(project.embed) : image(project.image, project.title)}
             <div class="project-copy">
               ${project.kicker ? `<p class="eyebrow">${project.kicker}</p>` : ""}
@@ -99,6 +104,25 @@
               ${project.stats ? `<div class="stats">${project.stats.map((stat) => `<div><strong>${stat.value}</strong><span>${stat.label}</span></div>`).join("")}</div>` : ""}
               ${(project.body || []).map((paragraph) => `<p>${paragraph}</p>`).join("")}
               ${renderLinks(project.links)}
+            </div>
+          </article>
+        `).join("")}
+      </section>
+    `;
+  }
+
+  function renderVisualizers(items) {
+    if (!items || items.length === 0) return "";
+    return `
+      <section class="section home-visualizers">
+        ${items.map((item) => `
+          <article class="home-visualizer reveal">
+            ${embedFrame({ ...item.embed, home: true })}
+            <div class="project-copy home-visualizer-copy">
+              ${item.kicker ? `<p class="eyebrow">${item.kicker}</p>` : ""}
+              <h2>${item.title}</h2>
+              ${(item.body || []).map((paragraph) => `<p>${paragraph}</p>`).join("")}
+              ${renderLinks(item.links)}
             </div>
           </article>
         `).join("")}
@@ -202,6 +226,7 @@
     app.innerHTML = [
       renderHero(page),
       renderHighlights(page.highlights),
+      renderVisualizers(page.visualizers),
       renderEmbeds(page.featuredEmbeds, page.featuredEmbedsTitle),
       renderProjects(page.projects),
       renderGalleryLinks(page.galleryLinks),
