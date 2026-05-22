@@ -1,14 +1,48 @@
 (function () {
   const app = document.querySelector("#app");
   const navLinks = Array.from(document.querySelectorAll("nav a"));
+  const routePaths = {
+    home: "/",
+    fsae: "/fsae/",
+    robotics: "/robotics/",
+    "cad-gallery": "/cad-gallery/",
+    "build-gallery": "/build-gallery/"
+  };
 
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
 
+  function cleanRouteName(value) {
+    return value.replace(/\/index\.html$/i, "/").replace(/^#/, "").replace(/^\/+|\/+$/g, "") || "home";
+  }
+
+  function routeToPath(route) {
+    return routePaths[route] || "/";
+  }
+
+  function routeFromPath(pathname) {
+    return cleanRouteName(pathname);
+  }
+
+  function routeFromHash() {
+    return cleanRouteName(window.location.hash);
+  }
+
   function normalizeRoute() {
-    const route = window.location.hash.replace("#", "") || "home";
+    const hashRoute = routeFromHash();
+    if (window.location.hash && window.portfolioContent.pages[hashRoute]) {
+      return hashRoute;
+    }
+    const route = routeFromPath(window.location.pathname);
     return window.portfolioContent.pages[route] ? route : "home";
+  }
+
+  function cleanLegacyHash(route) {
+    if (!window.location.hash) return;
+    const hashRoute = routeFromHash();
+    if (!window.portfolioContent.pages[hashRoute]) return;
+    history.replaceState({ route }, "", routeToPath(route));
   }
 
   function scrollToPageTop() {
@@ -159,8 +193,12 @@
   function renderPage() {
     const route = normalizeRoute();
     const page = window.portfolioContent.pages[route];
+    cleanLegacyHash(route);
     document.title = `${page.title} | Aayu Yadav`;
-    navLinks.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${route}`));
+    navLinks.forEach((link) => {
+      const linkRoute = routeFromPath(new URL(link.getAttribute("href"), window.location.origin).pathname);
+      link.classList.toggle("is-active", linkRoute === route);
+    });
     app.innerHTML = [
       renderHero(page),
       renderHighlights(page.highlights),
@@ -194,6 +232,22 @@
     reveals.forEach((item) => observer.observe(item));
   }
 
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link || link.target && link.target !== "_self") return;
+    const url = new URL(link.getAttribute("href"), window.location.href);
+    if (url.origin !== window.location.origin) return;
+    const route = routeFromPath(url.pathname);
+    if (!window.portfolioContent.pages[route]) return;
+    event.preventDefault();
+    const nextPath = routeToPath(route);
+    if (window.location.pathname !== nextPath || window.location.hash) {
+      history.pushState({ route }, "", nextPath);
+    }
+    renderPage();
+  });
+
+  window.addEventListener("popstate", renderPage);
   window.addEventListener("hashchange", renderPage);
   renderPage();
 })();

@@ -17,7 +17,7 @@ window.portfolioContent = {
           caption: "Interactive model of the suspension kinematics I designed for the UH FSAE car.",
           large: true,
           links: [
-            { label: "Open FSAE", href: "#fsae" },
+            { label: "Open FSAE", href: "/fsae/" },
             { label: "2025-2026 VD Binder", href: "https://drive.google.com/file/d/1Lf5DLrOVL8FCHjbPtm_apU45Xse8KaiJ/view?usp=sharing" }
           ]
         }
@@ -28,26 +28,26 @@ window.portfolioContent = {
           image: "assets/site-images/home/03-837b728ae3.jpg",
           backgroundImage: "assets/site-images/home/08-391e6bcce9.jpg",
           body: ["As part of UH's Formula SAE team, I've contributed to the development of the suspension system. My involvement spans designing the kinematic model, component design and FEA validation, and CNC machining, giving me ownership of one of the most critical systems on the racecar as a first-year student. Separately, I modeled a full FSAE car from scratch in two weeks to develop my top-down parametric CAD approach."],
-          links: [{ label: "FSAE", href: "#fsae" }]
+          links: [{ label: "FSAE", href: "/fsae/" }]
         },
         {
           title: "Robotics",
           image: "assets/site-images/home/04-0fea43885a.jpg",
           backgroundImage: "assets/site-images/home/09-2170987904.jpg",
           body: ["I spent three years with FRC team 2583, growing from makerspace committee lead to Robot Director. Improving my skills as an engineer and a leader, managing budget and build timelines, coordinating sub teams to deliver competitive machines that win awards."],
-          links: [{ label: "Robotics", href: "#robotics" }]
+          links: [{ label: "Robotics", href: "/robotics/" }]
         }
       ],
       galleryLinks: [
         {
           title: "Look at my build gallery here",
           image: "assets/site-images/home/05-5873b57abe.jpg",
-          links: [{ label: "Build Gallery", href: "#build-gallery" }]
+          links: [{ label: "Build Gallery", href: "/build-gallery/" }]
         },
         {
           title: "Look at my CAD gallery here",
           image: "assets/site-images/home/06-7fde2494f3.jpg",
-          links: [{ label: "CAD Gallery", href: "#cad-gallery" }]
+          links: [{ label: "CAD Gallery", href: "/cad-gallery/" }]
         }
       ]
     },
