@@ -188,7 +188,7 @@ window.portfolioContent = {
     "build-gallery": {
       eyebrow: "Machining, fabrication, repair",
       title: "Build Gallery",
-      lead: "A migrated gallery of fabrication, machining, robot build, repair, and prototyping work.",
+      lead: "",
       heroImage: "",
       galleryTitle: "Builds",
       gallery: [
@@ -302,7 +302,7 @@ window.portfolioContent.pages["build-gallery"].gallery = [
   { title: "Parts Cart", body: "Refurbished the top of the parts cart. Cut, sanded, and oiled the new top.", image: "assets/site-images/build-gallery/19-f4547b58c8.png" },
   { title: "Bambu P1S", body: "Maintained and repaired a Bambu P1S for FRC. Bought and replaced the extruder, fans, and nozzles.", image: "assets/site-images/build-gallery/20-b08688dc27.png" },
   { title: "Toast", body: "2024 season robot that I designed. I helped cut the plates on the CNC and turned shafts on the lathe.", image: "assets/site-images/build-gallery/21-cfb99714c7.png" },
-  { title: "FSAE Rear Shocks", body: "Rear shock and bellcrank assembly on the UH FSAE car.", image: "assets/site-images/build-gallery/23-fsae-rear-shocks-track.jpg" },
-  { title: "FSAE Bellcrank Install", body: "Installed rear bellcrank, pushrod, and suspension links on the chassis.", image: "assets/site-images/build-gallery/24-fsae-bellcrank-install.jpg" },
-  { title: "FSAE Rear Linkage", body: "Rear suspension links and wheel-end hardware installed on the chassis.", image: "assets/site-images/build-gallery/25-fsae-rear-linkage.jpg" }
+  { image: "assets/site-images/build-gallery/23-fsae-rear-shocks-track.jpg" },
+  { image: "assets/site-images/build-gallery/24-fsae-bellcrank-install.jpg" },
+  { image: "assets/site-images/build-gallery/25-fsae-rear-linkage.jpg" }
 ];
