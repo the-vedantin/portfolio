@@ -233,7 +233,7 @@ Object.assign(window.portfolioContent.pages["build-gallery"], {
 const projectBackgrounds = {
   fsae: [
     "assets/renders/21-revision-zero-2025-jul-12-06-20-47am-000-customizedview3908991307-jpg.jpg",
-    "assets/site-images/fsae/02-0dd95b9624.png",
+    "assets/site-images/fsae/07-vahan-hardpoints.png",
     "assets/renders/22-revision-zero-2025-jul-12-06-34-20am-000-customizedview12647960830-jpg.jpg",
     "assets/renders/23-revision-zero-2025-jul-12-06-37-45am-000-customizedview4558678813-jpg.jpg",
     "assets/renders/24-revision-zero-2025-jul-12-06-39-40am-000-customizedview8583869675-jpg.jpg"
