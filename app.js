@@ -8,6 +8,8 @@
     "cad-gallery": "/cad-gallery/",
     "build-gallery": "/build-gallery/"
   };
+  const gaMeasurementId = "G-EP197SXRDE";
+  let lastTrackedPath = "";
 
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
@@ -51,6 +53,22 @@
     if (typeof window.scrollTo === "function") {
       window.scrollTo(0, 0);
     }
+  }
+
+  function shouldTrackAnalytics() {
+    return !["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+  }
+
+  function trackPageView(page) {
+    if (!shouldTrackAnalytics() || typeof window.gtag !== "function") return;
+    const pagePath = `${window.location.pathname}${window.location.search}`;
+    if (pagePath === lastTrackedPath) return;
+    lastTrackedPath = pagePath;
+    window.gtag("config", gaMeasurementId, {
+      page_path: pagePath,
+      page_location: `${window.location.origin}${pagePath}`,
+      page_title: `${page.title} | Aayu Yadav`
+    });
   }
 
   function image(url, alt) {
@@ -238,6 +256,7 @@
     app.focus({ preventScroll: true });
     scrollToPageTop();
     requestAnimationFrame(scrollToPageTop);
+    trackPageView(page);
   }
 
   function observeReveals() {
