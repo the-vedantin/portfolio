@@ -273,5 +273,20 @@ window.portfolioRenders = [
     "sourceName": "0000.Robot_(1)_2026-May-19_12-40-52AM-000_CustomizedView30563877626_png.png",
     "local": "assets/renders/55-juicebox-robot-2026-may-19-12-40-52am.png",
     "bytes": 2316620
+  },
+  {
+    "sourceName": "Sam/Image9_001.png",
+    "local": "assets/renders/56-sam-image9-001.png",
+    "bytes": 1398261
+  },
+  {
+    "sourceName": "Sam/Image9_002.png",
+    "local": "assets/renders/57-sam-image9-002.png",
+    "bytes": 1064828
+  },
+  {
+    "sourceName": "Sam/Image9_000.png",
+    "local": "assets/renders/58-sam-image9-000.png",
+    "bytes": 2049795
   }
 ];
