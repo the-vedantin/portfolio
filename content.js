@@ -39,9 +39,9 @@ window.portfolioContent = {
           links: [{ label: "Build Gallery", href: "/build-gallery/" }]
         },
         {
-          title: "Look at my CAD gallery here",
+          title: "Look at my render gallery here",
           image: "assets/site-images/home/06-7fde2494f3.jpg",
-          links: [{ label: "CAD Gallery", href: "/cad-gallery/" }]
+          links: [{ label: "Render Gallery", href: "/cad-gallery/" }]
         }
       ]
     },
@@ -143,9 +143,9 @@ window.portfolioContent = {
       ]
     },
     "cad-gallery": {
-      eyebrow: "Onshape assemblies and renders",
-      title: "CAD Gallery",
-      lead: "Full assembly links and rendered models. All rendered models displayed here were designed by me.",
+      eyebrow: "Renders and Onshape assemblies",
+      title: "Render Gallery",
+      lead: "Full assembly links and rendered models.",
       heroImage: "assets/renders/33-vasuki-2024-aug-08-10-55-22pm-000-customizedview1636563838-jpg.jpg",
       cadLinks: [
         { label: "FSAE Car : Summer before college", href: "https://cad.onshape.com/documents/df8758a449cf495eeeaa7ba0/w/ba96230b83cf074d708fa65c/e/3eb064eaf07092929480af54" },
@@ -166,6 +166,7 @@ window.portfolioContent = {
         { label: "FRC Robot : Coaxial Concept", href: "https://cad.onshape.com/documents/24777e6873ec5ddc1b4777d0/w/e4656eff54bc243f3d2c99e3/e/925d6be072ce046b8bbdaed8" }
       ],
       galleryTitle: "Rendered Models",
+      galleryNote: "Disclaimer: the UH 2026 car and 2026 robot were not modelled entirely by me; those images are my renders.",
       gallery: [
         "https://lh3.googleusercontent.com/sitesv/AA5AbUBBV_geqnZ82GwzgTlJJa7Zmz-0Nqr0bSgXxKpKLZXVDRnTLjXo4TtibvJ1fI8NSHQTorDdf8eG0J27Q5fi6-2mssPuYr2Xyq35B4V67HIRq04Ue5rdwU7eCxr6zUHdJY9LwreDK7htoZYOau08i5EvcVQenIO5plZNxs9q3CkvEhxlWlqVvVwtasUxv3fLd9MuXERUcXyrRUaTep6Ek-1KPL2kp-ALg0yOBzA=w1280",
         "https://lh3.googleusercontent.com/sitesv/AA5AbUCcrIlaMmJtbQeNx53UGlteHR3652svgPcw7-yCF4MtBV8h-rD9W6WHD2NJ_rVUqPkqwuPsf1t6EQVUbz4jMsmtME3HDiOiVSpvzH0X_dCntQwAsmCBham93E73QzJkej5IEwHKC8hOxQddLPzB7Doky1KZtMNqNwajVvl5W5hfm-YDovAQ8r02OGEJeSDgE9XteN9pqDgZTk92MwVbR7N7cZwGTZ5wOZfibP8=w1280",
@@ -181,7 +182,7 @@ window.portfolioContent = {
         "https://lh3.googleusercontent.com/sitesv/AA5AbUDxoBig309Xjp5krX8Z0zc30tCE0uhEgzV5OJhXT_wv3O6r92Qwkbys7I4utpLh8jMZjiIBsAoVRM1z_ggYuJKUf8QiDdH6RSc6HmTn1Ppj4J6OzLVw6lQBeetVsVeZOs0kx0SB59EQc9pKbqW0aaJSXkBEtk6IpK3jin9dZNcQbW2-bKFkdsxCo2ZQYLE8SfsfJiMMow3hKB91prq8-u8xZcOdo1wFeaI1=w1280"
       ].map((image) => ({ image })),
       embeds: [
-        { title: "UH 2025 car render", src: "https://drive.google.com/file/d/1baSepIet6X4x_on8S0qxZM5XSAuocwvX/preview", caption: "UH's 2025 Car, Rendered in Unreal's TwinMotion" },
+        { title: "UH 2026 car render", src: "https://drive.google.com/file/d/1baSepIet6X4x_on8S0qxZM5XSAuocwvX/preview", caption: "UH's 2026 Car, Rendered in Unreal's TwinMotion" },
         { title: "FRC 2583 2026 robot render", src: "https://drive.google.com/file/d/1PKXJpnk4dD6dXs59hUV1qAxH2lRffpGC/preview", caption: "FRC 2583's 2026 Robot, Rendered in Unreal's TwinMotion" }
       ]
     },

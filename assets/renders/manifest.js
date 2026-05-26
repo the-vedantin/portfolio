@@ -223,5 +223,55 @@ window.portfolioRenders = [
     "sourceName": "Image18_000.png",
     "local": "assets/renders/45-sam-image18-000.png",
     "bytes": 210892
+  },
+  {
+    "sourceName": "JuiceBox/Image38.png",
+    "local": "assets/renders/46-juicebox-image38.png",
+    "bytes": 652568
+  },
+  {
+    "sourceName": "JuiceBox/Image36_000.png",
+    "local": "assets/renders/47-juicebox-image36-000.png",
+    "bytes": 1572424
+  },
+  {
+    "sourceName": "JuiceBox/Image36.png",
+    "local": "assets/renders/48-juicebox-image36.png",
+    "bytes": 525596
+  },
+  {
+    "sourceName": "JuiceBox/Image35.png",
+    "local": "assets/renders/49-juicebox-image35.png",
+    "bytes": 406446
+  },
+  {
+    "sourceName": "JuiceBox/Image24.png",
+    "local": "assets/renders/50-juicebox-image24.png",
+    "bytes": 2044619
+  },
+  {
+    "sourceName": "JuiceBox/Image15.png",
+    "local": "assets/renders/51-juicebox-image15.png",
+    "bytes": 1523234
+  },
+  {
+    "sourceName": "JuiceBox/Image8.png",
+    "local": "assets/renders/52-juicebox-image8.png",
+    "bytes": 2377532
+  },
+  {
+    "sourceName": "0000.Robot_(1)_2026-May-19_12-36-11AM-000_CustomizedView31075376664_png.png",
+    "local": "assets/renders/53-juicebox-robot-2026-may-19-12-36-11am.png",
+    "bytes": 262516
+  },
+  {
+    "sourceName": "0000.Robot_(1)_2026-May-19_12-39-12AM-000_CustomizedView6802355346_png.png",
+    "local": "assets/renders/54-juicebox-robot-2026-may-19-12-39-12am.png",
+    "bytes": 437974
+  },
+  {
+    "sourceName": "0000.Robot_(1)_2026-May-19_12-40-52AM-000_CustomizedView30563877626_png.png",
+    "local": "assets/renders/55-juicebox-robot-2026-may-19-12-40-52am.png",
+    "bytes": 2316620
   }
 ];

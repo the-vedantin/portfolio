@@ -71,9 +71,17 @@
     });
   }
 
+  function escapeAttr(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
   function image(url, alt) {
     if (!url) return "";
-    return `<img src="${url}" alt="${alt || ""}" loading="lazy">`;
+    return `<img src="${escapeAttr(url)}" alt="${escapeAttr(alt || "")}" loading="lazy">`;
   }
 
   function embedFrame(embed) {
@@ -178,21 +186,61 @@
     `;
   }
 
-  function renderGallery(items, title) {
+  function renderGallery(items, title, note) {
     if (!items || items.length === 0) return "";
     return `
       <section class="section wide-section reveal">
-        <h2>${title}</h2>
+        <div class="section-heading">
+          <h2>${title}</h2>
+          ${note ? `<p>${note}</p>` : ""}
+        </div>
         <div class="gallery-grid">
-          ${items.map((item, index) => `
-            <article class="gallery-card reveal" tabindex="0">
-              ${image(item.image, item.title || `${title} ${index + 1}`)}
+          ${items.map((item, index) => {
+            const alt = item.title || `${title} ${index + 1}`;
+            return `
+            <article class="gallery-card reveal">
+              <button class="gallery-open" type="button" data-gallery-image="${escapeAttr(item.image)}" data-gallery-alt="${escapeAttr(alt)}" aria-label="Open ${escapeAttr(alt)}">
+                ${image(item.image, alt)}
+              </button>
               ${(item.title || item.body) ? `<div class="caption">${item.title ? `<h3>${item.title}</h3>` : ""}${item.body ? `<p>${item.body}</p>` : ""}</div>` : ""}
             </article>
-          `).join("")}
+          `; }).join("")}
         </div>
       </section>
     `;
+  }
+
+  function ensureLightbox() {
+    let lightbox = document.querySelector(".image-lightbox");
+    if (lightbox) return lightbox;
+    lightbox = document.createElement("div");
+    lightbox.className = "image-lightbox";
+    lightbox.hidden = true;
+    lightbox.innerHTML = `
+      <button class="image-lightbox-close" type="button" aria-label="Close image">Close</button>
+      <img alt="">
+    `;
+    document.body.append(lightbox);
+    return lightbox;
+  }
+
+  function openLightbox(src, alt) {
+    if (!src) return;
+    const lightbox = ensureLightbox();
+    const img = lightbox.querySelector("img");
+    img.src = src;
+    img.alt = alt || "";
+    lightbox.hidden = false;
+    document.body.classList.add("lightbox-open");
+    lightbox.querySelector("button").focus({ preventScroll: true });
+  }
+
+  function closeLightbox() {
+    const lightbox = document.querySelector(".image-lightbox");
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    lightbox.querySelector("img").removeAttribute("src");
+    document.body.classList.remove("lightbox-open");
   }
 
   function renderGalleryLinks(items) {
@@ -249,7 +297,7 @@
       renderProjects(page.projects),
       renderGalleryLinks(page.galleryLinks),
       renderCadList(page.cadLinks),
-      renderGallery(page.gallery, page.galleryTitle || "Gallery"),
+      renderGallery(page.gallery, page.galleryTitle || "Gallery", page.galleryNote),
       renderEmbeds(page.embeds, page.embedsTitle || "Video Embeds")
     ].join("");
     observeReveals();
@@ -277,7 +325,18 @@
   }
 
   document.addEventListener("click", (event) => {
-    const link = event.target.closest("a[href]");
+    const target = event.target instanceof Element ? event.target : event.target.parentElement;
+    if (!target) return;
+    const galleryButton = target.closest(".gallery-open");
+    if (galleryButton) {
+      openLightbox(galleryButton.dataset.galleryImage, galleryButton.dataset.galleryAlt);
+      return;
+    }
+    if (target.closest(".image-lightbox-close") || target.classList.contains("image-lightbox")) {
+      closeLightbox();
+      return;
+    }
+    const link = target.closest("a[href]");
     if (!link || link.target && link.target !== "_self") return;
     const url = new URL(link.getAttribute("href"), window.location.href);
     if (url.origin !== window.location.origin) return;
@@ -289,6 +348,12 @@
       history.pushState({ route }, "", nextPath);
     }
     renderPage();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
   });
 
   window.addEventListener("popstate", renderPage);

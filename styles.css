@@ -184,12 +184,32 @@ h3 {
 }
 
 .wide-section > h2,
+.wide-section > .section-heading,
 .wide-section > .cards,
 .wide-section > .cad-list,
 .wide-section > .media-grid {
   width: min(100%, var(--max));
   margin-left: auto;
   margin-right: auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: clamp(18px, 4vw, 48px);
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-heading p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .stack {
@@ -399,6 +419,17 @@ h3 {
   transition: transform 280ms ease, filter 280ms ease;
 }
 
+.gallery-open {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: zoom-in;
+}
+
 .gallery-card .caption {
   position: absolute;
   inset: auto 0 0;
@@ -407,6 +438,7 @@ h3 {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 24%, rgba(0, 0, 0, 0.98));
   transform: translateY(calc(100% - 58px));
   transition: transform 240ms ease;
+  pointer-events: none;
 }
 
 .gallery-card:hover img,
@@ -426,6 +458,47 @@ h3 {
 
 .gallery-card .caption p {
   margin: 0;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 4vw, 56px);
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox img {
+  display: block;
+  max-width: min(100%, 1800px);
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  background: #000;
+}
+
+.image-lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  min-height: 38px;
+  padding: 8px 13px;
+  color: var(--bg);
+  background: var(--text);
+  border: 1px solid var(--text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .cad-list {
@@ -511,6 +584,14 @@ iframe.embed-home {
 
   .gallery-link-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading p {
+    margin-top: 10px;
   }
 
   iframe.embed-large {
