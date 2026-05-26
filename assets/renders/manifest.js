@@ -178,5 +178,50 @@ window.portfolioRenders = [
     "sourceName": "disarm_end_effector_2025-May-11_05-55-08AM-000_CustomizedView25206565222_jpg.jpg",
     "local": "assets/renders/36-disarm-end-effector-2025-may-11-05-55-08am-000-customizedview25206565222.jpg",
     "bytes": 234385
+  },
+  {
+    "sourceName": "Image1.png",
+    "local": "assets/renders/37-sam-image1.png",
+    "bytes": 779906
+  },
+  {
+    "sourceName": "Image6.png",
+    "local": "assets/renders/38-sam-image6.png",
+    "bytes": 700528
+  },
+  {
+    "sourceName": "Image10.png",
+    "local": "assets/renders/39-sam-image10.png",
+    "bytes": 445212
+  },
+  {
+    "sourceName": "Image9.png",
+    "local": "assets/renders/40-sam-image9.png",
+    "bytes": 416356
+  },
+  {
+    "sourceName": "Image13.png",
+    "local": "assets/renders/41-sam-image13.png",
+    "bytes": 1784056
+  },
+  {
+    "sourceName": "Image15.png",
+    "local": "assets/renders/42-sam-image15.png",
+    "bytes": 1718889
+  },
+  {
+    "sourceName": "Image24.png",
+    "local": "assets/renders/43-sam-image24.png",
+    "bytes": 1767705
+  },
+  {
+    "sourceName": "Image17_000.png",
+    "local": "assets/renders/44-sam-image17-000.png",
+    "bytes": 1771554
+  },
+  {
+    "sourceName": "Image18_000.png",
+    "local": "assets/renders/45-sam-image18-000.png",
+    "bytes": 210892
   }
 ];
