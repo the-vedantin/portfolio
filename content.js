@@ -305,5 +305,6 @@ window.portfolioContent.pages["build-gallery"].gallery = [
   { title: "Toast", body: "2024 season robot that I designed. I helped cut the plates on the CNC and turned shafts on the lathe.", image: "assets/site-images/build-gallery/21-cfb99714c7.png" },
   { image: "assets/site-images/build-gallery/23-fsae-rear-shocks-track.jpg" },
   { image: "assets/site-images/build-gallery/24-fsae-bellcrank-install.jpg" },
-  { image: "assets/site-images/build-gallery/25-fsae-rear-linkage.jpg" }
+  { image: "assets/site-images/build-gallery/25-fsae-rear-linkage.jpg" },
+  { body: "Tie rod + brake calliper mount for welded upright", image: "assets/site-images/build-gallery/26-toerodcalliper.jpg" }
 ];
