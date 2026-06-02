@@ -139,6 +139,18 @@ window.portfolioContent = {
           image: "assets/site-images/robotics/03-b5f2cc4511.jpg",
           body: ["For my senior project in high school, I designed a 4-DOF robot using BEAR Series actuators from Westwood Robotics. It used a modular wrist and base to hot swap end effectors and place the robot onto drivetrains or turrets with ease."],
           links: [{ label: "QUARANTINE Writeup", href: "https://drive.google.com/file/d/12iJiMOsZV_Oa-f53DnbNLyjpN4q4G9bq/view?usp=sharing" }]
+        },
+        {
+          kicker: "FRC mechanism simulator",
+          title: "MotionSim",
+          embed: {
+            title: "MotionSim FRC mechanism simulator",
+            src: "https://the-vedantin.github.io/motionsim_frc/",
+            large: true,
+            fullWidth: true
+          },
+          body: ["A browser-based mechanism simulator inspired by ReCalc. It supports pivot and linear mechanism simulation at different angles and planes, including angled elevators, linear intakes, dye rotors, slap down intakes, and arms.", "Limits: it does not model battery sag, brownout, breaker heating, thermal derating, backlash, cable stretch, or full-robot electrical behavior."],
+          links: [{ label: "Open MotionSim", href: "https://the-vedantin.github.io/motionsim_frc/" }]
         }
       ]
     },
