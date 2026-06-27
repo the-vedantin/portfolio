@@ -127,18 +127,6 @@ window.portfolioContent = {
           ]
         },
         {
-          kicker: "FRC mechanism simulator",
-          title: "MotionSim",
-          embed: {
-            title: "MotionSim FRC mechanism simulator",
-            src: "https://the-vedantin.github.io/motionsim_frc/",
-            large: true,
-            fullWidth: true
-          },
-          body: ["A browser-based mechanism simulator inspired by ReCalc. It supports pivot and linear mechanism simulation at different angles and planes, including angled elevators, linear intakes, dye rotors, slap down intakes, and arms.", "Limits: it does not model battery sag, brownout, breaker heating, thermal derating, backlash, cable stretch, or full-robot electrical behavior."],
-          links: [{ label: "Open MotionSim", href: "https://the-vedantin.github.io/motionsim_frc/" }]
-        },
-        {
           kicker: "FRC Team 2583",
           title: "Toast, Kiwi, and DepthCharge",
           image: "assets/site-images/robotics/02-2248e6c70f.jpg",
@@ -151,6 +139,18 @@ window.portfolioContent = {
           image: "assets/site-images/robotics/03-b5f2cc4511.jpg",
           body: ["For my senior project in high school, I designed a 4-DOF robot using BEAR Series actuators from Westwood Robotics. It used a modular wrist and base to hot swap end effectors and place the robot onto drivetrains or turrets with ease."],
           links: [{ label: "QUARANTINE Writeup", href: "https://drive.google.com/file/d/12iJiMOsZV_Oa-f53DnbNLyjpN4q4G9bq/view?usp=sharing" }]
+        },
+        {
+          kicker: "FRC mechanism simulator",
+          title: "MotionSim",
+          embed: {
+            title: "MotionSim FRC mechanism simulator",
+            src: "https://the-vedantin.github.io/motionsim_frc/",
+            large: true,
+            fullWidth: true
+          },
+          body: ["A browser-based mechanism simulator inspired by ReCalc. It supports pivot and linear mechanism simulation at different angles and planes, including angled elevators, linear intakes, dye rotors, slap down intakes, and arms.", "Limits: it does not model battery sag, brownout, breaker heating, thermal derating, backlash, cable stretch, or full-robot electrical behavior."],
+          links: [{ label: "Open MotionSim", href: "https://the-vedantin.github.io/motionsim_frc/" }]
         }
       ]
     },
@@ -253,9 +253,9 @@ const projectBackgrounds = {
   ],
   robotics: [
     "assets/renders/02-0-robot-1-horus-2024-aug-08-10-46-18pm-000-customizedview5174201726-jpg.jpg",
-    "assets/site-images/robotics/08-motionsim-screenshot.png",
     "assets/site-images/robotics/06-orange-dynamite-roller.jpg",
-    "assets/site-images/robotics/07-orange-dynamite-lit.jpg"
+    "assets/site-images/robotics/07-orange-dynamite-lit.jpg",
+    "assets/site-images/robotics/08-motionsim-screenshot.png"
   ]
 };
 
