@@ -193,6 +193,12 @@ h3 {
   margin-right: auto;
 }
 
+.wide-section > .gallery-shell {
+  width: min(100%, 1680px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section-heading {
   display: flex;
   align-items: end;
@@ -322,6 +328,45 @@ h3 {
   gap: 16px;
 }
 
+.gallery-shell.with-cad-links {
+  width: min(100%, 1800px);
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  gap: clamp(22px, 3vw, 42px);
+  align-items: start;
+}
+
+.gallery-main {
+  min-width: 0;
+}
+
+.gallery-cad-links {
+  position: sticky;
+  top: 84px;
+  max-height: calc(100vh - 112px);
+  overflow: auto;
+  padding-right: 20px;
+  border-right: 1px solid var(--line);
+}
+
+.gallery-cad-links h2 {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.gallery-cad-links .cad-list {
+  width: auto;
+  columns: 1;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.92rem;
+}
+
+.gallery-shell.with-cad-links .gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr));
+  gap: 22px;
+}
+
 .gallery-link-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -419,6 +464,10 @@ h3 {
   transition: transform 280ms ease, filter 280ms ease;
 }
 
+.gallery-shell.with-cad-links .gallery-card img {
+  min-height: clamp(340px, 32vw, 560px);
+}
+
 .gallery-open {
   display: block;
   width: 100%;
@@ -510,6 +559,25 @@ body.lightbox-open {
 .cad-list li {
   break-inside: avoid;
   margin: 0 0 10px;
+}
+
+@media (max-width: 980px) {
+  .gallery-shell.with-cad-links {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-cad-links {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding: 0 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .gallery-cad-links .cad-list {
+    columns: 2 260px;
+  }
 }
 
 .media-grid {

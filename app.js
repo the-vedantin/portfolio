@@ -186,25 +186,38 @@
     `;
   }
 
-  function renderGallery(items, title, note) {
+  function renderGallery(items, title, note, cadLinks) {
     if (!items || items.length === 0) return "";
+    const cadList = cadLinks && cadLinks.length ? `
+          <aside class="gallery-cad-links" aria-label="CAD links">
+            <h2>CAD Links</h2>
+            <ol class="cad-list">
+              ${cadLinks.map((item) => `<li><a href="${item.href}" target="_blank" rel="noreferrer">${item.label}</a></li>`).join("")}
+            </ol>
+          </aside>
+        ` : "";
     return `
       <section class="section wide-section reveal">
-        <div class="section-heading">
-          <h2>${title}</h2>
-          ${note ? `<p>${note}</p>` : ""}
-        </div>
-        <div class="gallery-grid">
-          ${items.map((item, index) => {
-            const alt = item.title || `${title} ${index + 1}`;
-            return `
-            <article class="gallery-card reveal">
-              <button class="gallery-open" type="button" data-gallery-image="${escapeAttr(item.image)}" data-gallery-alt="${escapeAttr(alt)}" aria-label="Open ${escapeAttr(alt)}">
-                ${image(item.image, alt)}
-              </button>
-              ${(item.title || item.body) ? `<div class="caption">${item.title ? `<h3>${item.title}</h3>` : ""}${item.body ? `<p>${item.body}</p>` : ""}</div>` : ""}
-            </article>
-          `; }).join("")}
+        <div class="gallery-shell ${cadList ? "with-cad-links" : ""}">
+          ${cadList}
+          <div class="gallery-main">
+            <div class="section-heading">
+              <h2>${title}</h2>
+              ${note ? `<p>${note}</p>` : ""}
+            </div>
+            <div class="gallery-grid">
+              ${items.map((item, index) => {
+                const alt = item.title || `${title} ${index + 1}`;
+                return `
+                <article class="gallery-card reveal">
+                  <button class="gallery-open" type="button" data-gallery-image="${escapeAttr(item.image)}" data-gallery-alt="${escapeAttr(alt)}" aria-label="Open ${escapeAttr(alt)}">
+                    ${image(item.image, alt)}
+                  </button>
+                  ${(item.title || item.body) ? `<div class="caption">${item.title ? `<h3>${item.title}</h3>` : ""}${item.body ? `<p>${item.body}</p>` : ""}</div>` : ""}
+                </article>
+              `; }).join("")}
+            </div>
+          </div>
         </div>
       </section>
     `;
@@ -289,6 +302,7 @@
       const linkRoute = routeFromPath(new URL(link.getAttribute("href"), window.location.origin).pathname);
       link.classList.toggle("is-active", linkRoute === route);
     });
+    const galleryOwnsCadLinks = page.gallery && page.gallery.length && page.cadLinks && page.cadLinks.length;
     app.innerHTML = [
       page.hideHero ? "" : renderHero(page),
       renderHighlights(page.highlights),
@@ -296,8 +310,8 @@
       renderEmbeds(page.featuredEmbeds, page.featuredEmbedsTitle),
       renderProjects(page.projects),
       renderGalleryLinks(page.galleryLinks),
-      renderCadList(page.cadLinks),
-      renderGallery(page.gallery, page.galleryTitle || "Gallery", page.galleryNote),
+      galleryOwnsCadLinks ? "" : renderCadList(page.cadLinks),
+      renderGallery(page.gallery, page.galleryTitle || "Gallery", page.galleryNote, galleryOwnsCadLinks ? page.cadLinks : null),
       renderEmbeds(page.embeds, page.embedsTitle || "Video Embeds")
     ].join("");
     observeReveals();
