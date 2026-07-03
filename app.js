@@ -207,13 +207,16 @@
             </div>
             <div class="gallery-grid">
               ${items.map((item, index) => {
-                const alt = item.title || `${title} ${index + 1}`;
+                const itemImage = typeof item === "string" ? item : item.image;
+                const itemTitle = typeof item === "string" ? "" : item.title;
+                const itemBody = typeof item === "string" ? "" : item.body;
+                const alt = itemTitle || `${title} ${index + 1}`;
                 return `
                 <article class="gallery-card reveal">
-                  <button class="gallery-open" type="button" data-gallery-image="${escapeAttr(item.image)}" data-gallery-alt="${escapeAttr(alt)}" aria-label="Open ${escapeAttr(alt)}">
-                    ${image(item.image, alt)}
+                  <button class="gallery-open" type="button" data-gallery-image="${escapeAttr(itemImage)}" data-gallery-alt="${escapeAttr(alt)}" aria-label="Open ${escapeAttr(alt)}">
+                    ${image(itemImage, alt)}
                   </button>
-                  ${(item.title || item.body) ? `<div class="caption">${item.title ? `<h3>${item.title}</h3>` : ""}${item.body ? `<p>${item.body}</p>` : ""}</div>` : ""}
+                  ${(itemTitle || itemBody) ? `<div class="caption">${itemTitle ? `<h3>${itemTitle}</h3>` : ""}${itemBody ? `<p>${itemBody}</p>` : ""}</div>` : ""}
                 </article>
               `; }).join("")}
             </div>
