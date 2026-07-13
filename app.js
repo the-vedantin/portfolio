@@ -64,10 +64,11 @@
     const pagePath = `${window.location.pathname}${window.location.search}`;
     if (pagePath === lastTrackedPath) return;
     lastTrackedPath = pagePath;
+    const pageTitle = page.metaTitle || page.title || "Home";
     window.gtag("config", gaMeasurementId, {
       page_path: pagePath,
       page_location: `${window.location.origin}${pagePath}`,
-      page_title: `${page.title} | Aayu Yadav`
+      page_title: `${pageTitle} | Aayu Yadav`
     });
   }
 
@@ -107,12 +108,12 @@
       <section class="hero page-band reveal ${page.heroImage ? "" : "hero-text-only"}" style="${page.backgroundImage ? `--bg-image: url('${page.backgroundImage}')` : ""}">
         <div class="hero-copy">
           ${page.eyebrow ? `<p class="eyebrow">${page.eyebrow}</p>` : ""}
-          <h1>${page.title}</h1>
+          ${page.title ? `<h1>${page.title}</h1>` : ""}
           ${page.lead ? `<p class="lead">${page.lead}</p>` : ""}
           ${(page.body || []).map((paragraph) => `<p>${paragraph}</p>`).join("")}
           ${renderLinks(page.links)}
         </div>
-        ${image(page.heroImage, page.title)}
+        ${image(page.heroImage, page.title || page.metaTitle || "Aayu Yadav")}
       </section>
     `;
   }
@@ -300,7 +301,8 @@
     const route = normalizeRoute();
     const page = window.portfolioContent.pages[route];
     cleanLegacyHash(route);
-    document.title = `${page.title} | Aayu Yadav`;
+    const pageTitle = page.metaTitle || page.title || "Home";
+    document.title = `${pageTitle} | Aayu Yadav`;
     navLinks.forEach((link) => {
       const linkRoute = routeFromPath(new URL(link.getAttribute("href"), window.location.origin).pathname);
       link.classList.toggle("is-active", linkRoute === route);

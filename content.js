@@ -1,7 +1,8 @@
 window.portfolioContent = {
   pages: {
     home: {
-      title: "ME!",
+      title: "",
+      metaTitle: "Home",
       body: [
         "Hi! I'm Aayu. I'm a Mechanical Engineering student studying at the University of Houston (Class of 2029).",
         "I’m driven by competitive engineering and pursue my projects with a lot of ambition to deliver designs that make the most out of the constraints I’m working with. I emphasize efficient workflows that use parametric models to cut out repetitive work and create faster design cycles."
@@ -12,9 +13,9 @@ window.portfolioContent = {
       visualizers: [
         {
           kicker: "FSAE",
-          title: "2026 FSAE suspension visualizer",
+          title: "2026 FSAE suspension",
           embed: {
-            title: "2026 FSAE suspension visualizer",
+            title: "2026 FSAE suspension",
             src: "embeds/suspension_3d.html"
           },
           body: ["As part of UH's Formula SAE team, I've contributed to the development of the suspension system. My involvement spans designing the kinematic model, component design and FEA validation, and CNC machining, giving me ownership of one of the most critical systems on the racecar as a first-year student. Separately, I modeled a full FSAE car from scratch in two weeks to develop my top-down parametric CAD approach."],
@@ -59,7 +60,7 @@ window.portfolioContent = {
           kicker: "UH FSAE team suspension work",
           title: "2025-2026 Vehicle Dynamics and Suspension",
           embed: {
-            title: "2026 FSAE suspension visualizer",
+            title: "2026 FSAE suspension",
             src: "embeds/suspension_3d.html",
             large: true,
             fullWidth: true
