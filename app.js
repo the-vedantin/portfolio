@@ -6,7 +6,8 @@
     fsae: "/fsae/",
     robotics: "/robotics/",
     "cad-gallery": "/cad-gallery/",
-    "build-gallery": "/build-gallery/"
+    "build-gallery": "/build-gallery/",
+    photography: "/photography/"
   };
   const gaMeasurementId = "G-EP197SXRDE";
   let lastTrackedPath = "";
@@ -80,9 +81,10 @@
       .replace(/>/g, "&gt;");
   }
 
-  function image(url, alt) {
+  function image(url, alt, width, height) {
     if (!url) return "";
-    return `<img src="${escapeAttr(url)}" alt="${escapeAttr(alt || "")}" loading="lazy">`;
+    const size = width && height ? ` width="${width}" height="${height}"` : "";
+    return `<img src="${escapeAttr(url)}" alt="${escapeAttr(alt || "")}"${size} loading="lazy" decoding="async">`;
   }
 
   function embedFrame(embed) {
@@ -227,6 +229,37 @@
     `;
   }
 
+  function renderPhotoGallery(items, title, note) {
+    if (!items || items.length === 0) return "";
+    return `
+      <section class="section wide-section reveal">
+        ${(title || note) ? `
+        <div class="section-heading">
+          ${title ? `<h2>${title}</h2>` : ""}
+          ${note ? `<p>${note}</p>` : ""}
+        </div>` : ""}
+        <div class="photo-grid">
+          ${items.map((item, index) => {
+            const itemImage = typeof item === "string" ? item : item.image;
+            const itemTitle = typeof item === "string" ? "" : item.title;
+            const itemBody = typeof item === "string" ? "" : item.body;
+            const alt = (typeof item === "string" ? "" : item.alt) || itemTitle || `${title} ${index + 1}`;
+            const itemFull = (typeof item === "string" ? "" : item.full) || itemImage;
+            const itemWidth = typeof item === "string" ? null : item.width;
+            const itemHeight = typeof item === "string" ? null : item.height;
+            return `
+            <figure class="photo-card reveal">
+              <button class="gallery-open" type="button" data-gallery-image="${escapeAttr(itemFull)}" data-gallery-alt="${escapeAttr(alt)}" aria-label="Open ${escapeAttr(alt)}">
+                ${image(itemImage, alt, itemWidth, itemHeight)}
+              </button>
+              ${(itemTitle || itemBody) ? `<figcaption>${itemTitle ? `<strong>${itemTitle}</strong>` : ""}${itemBody ? `<span>${itemBody}</span>` : ""}</figcaption>` : ""}
+            </figure>
+          `; }).join("")}
+        </div>
+      </section>
+    `;
+  }
+
   function ensureLightbox() {
     let lightbox = document.querySelector(".image-lightbox");
     if (lightbox) return lightbox;
@@ -317,6 +350,7 @@
       renderGalleryLinks(page.galleryLinks),
       galleryOwnsCadLinks ? "" : renderCadList(page.cadLinks),
       renderGallery(page.gallery, page.galleryTitle || "Gallery", page.galleryNote, galleryOwnsCadLinks ? page.cadLinks : null),
+      renderPhotoGallery(page.photos, page.galleryTitle, page.galleryNote),
       renderEmbeds(page.embeds, page.embedsTitle || "Video Embeds")
     ].join("");
     observeReveals();
