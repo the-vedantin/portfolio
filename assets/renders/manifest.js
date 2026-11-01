@@ -288,5 +288,60 @@ window.portfolioRenders = [
     "sourceName": "Sam/Image9_000.png",
     "local": "assets/renders/58-sam-image9-000.png",
     "bytes": 2049795
+  },
+  {
+    "sourceName": "Masking_Deposition_Assembly_2026-Jul-19_07-35-09AM-000_CustomizedView35652363442_jpg.jpg",
+    "local": "assets/renders/59-masking-deposition-assembly-2026-jul-19-07-35-09am-000-customizedview35652363442-jpg.jpg",
+    "bytes": 166743
+  },
+  {
+    "sourceName": "Masking_Deposition_Assembly_2026-Jul-19_07-50-16AM-000_CustomizedView7558570057_jpg.jpg",
+    "local": "assets/renders/60-masking-deposition-assembly-2026-jul-19-07-50-16am-000-customizedview7558570057-jpg.jpg",
+    "bytes": 136320
+  },
+  {
+    "sourceName": "R_2025-May-01_09-06-47PM-000_CustomizedView11054984155_jpg.jpg",
+    "local": "assets/renders/61-r-2025-may-01-09-06-47pm-000-customizedview11054984155-jpg.jpg",
+    "bytes": 329967
+  },
+  {
+    "sourceName": "SWOORVE v13.jpg",
+    "local": "assets/renders/62-swoorve-v13.jpg",
+    "bytes": 66278
+  },
+  {
+    "sourceName": "Toasty_v2_render_2024-Mar-14_02-38-10AM-000_CustomizedView7012468808_jpg.jpg",
+    "local": "assets/renders/63-toasty-v2-render-2024-mar-14-02-38-10am-000-customizedview7012468808-jpg.jpg",
+    "bytes": 2231729
+  },
+  {
+    "sourceName": "Toasty_v2_render_2024-Mar-14_12-50-49AM-000_CustomizedView5179445874_jpg.jpg",
+    "local": "assets/renders/64-toasty-v2-render-2024-mar-14-12-50-49am-000-customizedview5179445874-jpg.jpg",
+    "bytes": 62898
+  },
+  {
+    "sourceName": "UNDERTOW_V1_2025-Jan-12_05-33-20PM-000_CustomizedView44994323794_jpg.jpg",
+    "local": "assets/renders/65-undertow-v1-2025-jan-12-05-33-20pm-000-customizedview44994323794-jpg.jpg",
+    "bytes": 238472
+  },
+  {
+    "sourceName": "final_0_frame_0_0 (1).jpg",
+    "local": "assets/renders/66-final-0-frame-0-0-1.jpg",
+    "bytes": 177002
+  },
+  {
+    "sourceName": "final_0_frame_0_0.jpg",
+    "local": "assets/renders/67-final-0-frame-0-0.jpg",
+    "bytes": 117638
+  },
+  {
+    "sourceName": "final_1_frame_35_0.jpg",
+    "local": "assets/renders/68-final-1-frame-35-0.jpg",
+    "bytes": 97259
+  },
+  {
+    "sourceName": "gallery.0.jpg",
+    "local": "assets/renders/69-gallery-0.jpg",
+    "bytes": 174674
   }
 ];

@@ -358,5 +358,15 @@ window.portfolioContent.pages["build-gallery"].gallery = [
   { image: "assets/site-images/build-gallery/23-fsae-rear-shocks-track.jpg" },
   { image: "assets/site-images/build-gallery/24-fsae-bellcrank-install.jpg" },
   { image: "assets/site-images/build-gallery/25-fsae-rear-linkage.jpg" },
-  { body: "Tie rod + brake calliper mount for welded upright", image: "assets/site-images/build-gallery/26-toerodcalliper.jpg" }
+  { body: "Tie rod + brake calliper mount for welded upright", image: "assets/site-images/build-gallery/26-toerodcalliper.jpg" },
+  { body: "Programmed and used a 4th axis to make radial bores on a Makera cnc", image: "assets/site-images/build-gallery/27-4th-axis-programming.jpg" },
+  { body: "Cleanly machined coupling grooves", image: "assets/site-images/build-gallery/28-aluminum-cnc-carvera.jpg" },
+  { body: "Fixtures made and parts machined on the Carvera CNC.", image: "assets/site-images/build-gallery/29-made-fixtures-and-did-cnc-carvera.jpg" },
+  { body: "CAM and toolpaths made in Fusion 360.", image: "assets/site-images/build-gallery/30-did-cam-viafusion.jpg" },
+  { body: "Designed a complex double 4 bar linkage for snipping", image: "assets/site-images/build-gallery/31-double-4bar-snipping-mechanism.jpg" },
+  { body: "Suspension weld jig.", image: "assets/site-images/build-gallery/32-suspension-weld-jig.jpg" },
+  { body: "Worked on restoring an old Grizzly lathe/mill combo", image: "assets/site-images/build-gallery/33-lathe-restoration.jpg" },
+  { image: "assets/site-images/build-gallery/34-pxl-20260806-045255138.jpg" },
+  { image: "assets/site-images/build-gallery/35-pxl-20260816-032703458.jpg" },
+  { image: "assets/site-images/build-gallery/36-pxl-20260819-080233938.jpg" }
 ];
